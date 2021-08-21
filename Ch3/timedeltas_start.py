@@ -28,13 +28,14 @@ print("one yer from now is ", now + timedelta(days=5))
 today =date.today()
 afd = date(today.year, 4, 1)
 
+afd = afd.replace(year = today.year + 1)
 
 # use date comparison to see if April Fool's has already gone for this year
 # if it has, use the replace() function to get the date for next year
 if afd < today:
     print("April fools day went by %d days ago" % ((today - afd).days))
 else:
-    print("April fools day is after ", afd - timedelta(days=today.day), " days")
+    print("April fools day is after %d days" % ((afd - today).days))
 
 
 # Now calculate the amount of time until April Fool's Day  

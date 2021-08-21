@@ -3,16 +3,28 @@
 #
 
 # import the calendar module
+import calendar
+from datetime import date
 
 
 # create a plain text calendar
+c = calendar.TextCalendar(calendar.MONDAY)
+now = date.today()
+st = c.formatmonth(now.year, 1, 0, 0)
+print(st)
 
 
 # create an HTML formatted calendar
+hc = calendar.HTMLCalendar(calendar.SUNDAY)
+st = hc.formatmonth(2021, 8)
+print(st)
 
 
 # loop over the days of a month
 # zeroes mean that the day of the week is in an overlapping month
+# for i in c.itermonthdays(2021, 8):
+#     print(i)
+
 
   
 # The Calendar module provides useful utilities for the given locale,
